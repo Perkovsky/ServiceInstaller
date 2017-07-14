@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ServiceInstaller"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Service Installer" Height="150" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <TextBox x:Name="tbFileServiceName" HorizontalAlignment="Left" Height="23" Margin="7,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" IsEnabled="False"/>
+        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" Margin="179,10,0,0" VerticalAlignment="Top" Width="97" Height="24" Click="btnBrowse_Click"/>
+        <Button x:Name="btnInstall" Content="Install" HorizontalAlignment="Left" Margin="7,45,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnUninstall" Content="Uninstall" HorizontalAlignment="Left" Margin="92,45,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="7,70,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="92,70,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

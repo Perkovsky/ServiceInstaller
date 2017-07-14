@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,23 @@ namespace ServiceInstaller
     /// </summary>
     public partial class MainWindow : Window
     {
+        private OpenFileDialog openFileDialog = new OpenFileDialog();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnBrowse_Click(object sender, RoutedEventArgs e)
+        {
+            // Set filter for file extension and default file extension
+            openFileDialog.DefaultExt = ".exe";
+            openFileDialog.Filter = "NT-Services (.exe)|*.exe";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                tbFileServiceName.Text = openFileDialog.SafeFileName;
+            }
         }
     }
 }
